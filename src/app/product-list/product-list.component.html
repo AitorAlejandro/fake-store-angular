@@ -2,6 +2,7 @@
 <ul>
   <li *ngFor="let product of products">
     <div>{{ product.id }}</div>
-    <div>{{ product.title | uppercase}}</div>
+    <div>{{ product.title | uppercase }}</div>
+    <div><img [src]="product.image" /></div>
   </li>
 </ul>
