@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 import type { Product } from 'src/core/entities';
-import { MockProducts } from './MOCK_PRODUCTS';
-
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  constructor() {}
+  private FAKE_API_URL = 'https://fakestoreapi.com';
+
+  constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    const products = of(MockProducts);
-    return products;
+    return this.http.get<Product[]>(`${this.FAKE_API_URL}/products`);
   }
 }
