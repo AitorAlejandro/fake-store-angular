@@ -1,4 +1,6 @@
-# FakeStoreAngular
+# fake-store-angular
+
+Live demo: [fake-store-angular.pages.dev/](https://fake-store-angular.pages.dev/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
